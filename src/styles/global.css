@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light;
+  --bg: 248 250 252;
+  --bg-muted: 241 245 249;
+  --surface: 255 255 255;
+  --surface-alt: 255 255 255 / 0.72;
+  --border: 226 232 240;
+  --text: 15 23 42;
+  --text-soft: 71 85 105;
+  --brand: 14 116 144;
+  --accent: 249 115 22;
+  --shadow: 15 23 42 / 0.08;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: 2 6 23;
+  --bg-muted: 15 23 42;
+  --surface: 15 23 42;
+  --surface-alt: 15 23 42 / 0.82;
+  --border: 51 65 85;
+  --text: 226 232 240;
+  --text-soft: 148 163 184;
+  --brand: 34 211 238;
+  --accent: 251 146 60;
+  --shadow: 2 6 23 / 0.45;
+}
+
+@layer base {
+  * {
+    @apply border-[rgb(var(--border))];
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen antialiased;
+    background:
+      radial-gradient(circle at top left, rgb(var(--brand) / 0.14), transparent 28%),
+      radial-gradient(circle at top right, rgb(var(--accent) / 0.12), transparent 20%),
+      linear-gradient(180deg, rgb(var(--bg-muted)) 0%, rgb(var(--bg)) 60%);
+    color: rgb(var(--text));
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgb(var(--surface-alt));
+    box-shadow: 0 20px 45px rgb(var(--shadow));
+    backdrop-filter: blur(18px);
+    @apply border;
+  }
+
+  .surface-card {
+    @apply rounded-3xl border;
+    background: rgb(var(--surface));
+    box-shadow: 0 18px 40px rgb(var(--shadow));
+  }
+
+  .text-muted {
+    color: rgb(var(--text-soft));
+  }
+}
