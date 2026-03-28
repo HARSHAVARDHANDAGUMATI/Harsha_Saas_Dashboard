@@ -4,7 +4,7 @@ import Dashboardlayout from '../components/layout/Dashboardlayout'
 import Login from '../pages/auth/Login'
 import Signup from '../pages/auth/Signup'
 import ForgotPassword from '../pages/auth/ForgotPassword'
-import DashBoard from '../pages/DashBoard'
+import Dashboard from '../pages/dashboard'
 import Analytics from '../pages/Analytics'
 import UserManagement from '../pages/UserManagement'
 import Billing from '../pages/Billing'
@@ -20,7 +20,7 @@ function AppRoutes() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route element={<ProtectedRoute />}>
         <Route element={<Dashboardlayout />}>
-          <Route path="/dashboard" element={<DashBoard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/users" element={<UserManagement />} />
           <Route path="/billing" element={<Billing />} />
