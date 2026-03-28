@@ -6,7 +6,7 @@ export const filterOptions = ['daily', 'weekly', 'monthly']
 export const navItems = [
   { path: '/dashboard', label: 'Overview', icon: FiGrid },
   { path: '/analytics', label: 'Analytics', icon: FiBarChart2 },
-  { path: '/users', label: 'Users', icon: FiUsers, roles: ['Admin'] },
+  { path: '/users', label: 'Users', icon: FiUsers },
   { path: '/billing', label: 'Billing', icon: FiCreditCard },
   { path: '/settings', label: 'Settings', icon: FiSettings },
 ]

@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useMemo, useState } from 'react'
-import { mockUsers } from '../data/mock-users'
+import { mockUsers } from '../data/MockUsers'
 import { paymentHistory } from '../data/MockBilling'
 import { dashboardOverview } from '../data/MockAnalytics'
 import { plans } from '../data/Plans'

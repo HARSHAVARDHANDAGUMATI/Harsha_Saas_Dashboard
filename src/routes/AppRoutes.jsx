@@ -1,11 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import ProtectedRoute from './ProtectedRoute'
-import RoleGuard from './RoleGuard'
 import Dashboardlayout from '../components/layout/Dashboardlayout'
 import Login from '../pages/auth/Login'
 import Signup from '../pages/auth/Signup'
 import ForgotPassword from '../pages/auth/ForgotPassword'
-import Dashboard from '../pages/dashboard'
+import DashBoard from '../pages/DashBoard'
 import Analytics from '../pages/Analytics'
 import UserManagement from '../pages/UserManagement'
 import Billing from '../pages/Billing'
@@ -21,11 +20,9 @@ function AppRoutes() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route element={<ProtectedRoute />}>
         <Route element={<Dashboardlayout />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/analytics" element={<Analytics />} />
-          <Route element={<RoleGuard roles={['Admin']} />}>
-            <Route path="/users" element={<UserManagement />} />
-          </Route>
+          <Route path="/users" element={<UserManagement />} />
           <Route path="/billing" element={<Billing />} />
           <Route path="/settings" element={<Settings />} />
         </Route>

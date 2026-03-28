@@ -1,7 +1,7 @@
 import { FiArrowUpRight } from 'react-icons/fi'
 import Card from '../common/Card'
 import Badge from '../common/Badge'
-import AnimatedCounter from './animated-counter'
+import AnimatedCounter from './AnimatedCounter'
 
 function KPICard({ item }) {
   const accentStyles = {
